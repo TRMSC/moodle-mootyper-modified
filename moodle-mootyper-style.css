@@ -47,9 +47,6 @@
     border-radius: 15px;
     box-shadow: 3px 3px 14px 3px #aaa;
 }
-
-element.style {
-}
 #keyboard {
     color: #727272;
     font-weight: 500;
@@ -57,13 +54,16 @@ element.style {
     width: 650px;
 }
 
-/* The following parts could also be changed in the activity settings. */
-
+/* The colors in the .txt*-classes could also be changed in the activity settings. */
+.txtBlue {
+    background-color: #fff75b;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    border-top: 1px solid #e1c606;
+    border-bottom: 3px solid #c3ac03;
+}
 .txtRed {
     background-color: #ff999954;
     border-radius: 5px;
-}
-.txtBlue {
-    background-color: #fffe00;
-    border-radius: 2px;
 }

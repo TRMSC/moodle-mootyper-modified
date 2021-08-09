@@ -1,0 +1,42 @@
+<!-- Moodle-Mootyper-Modified v.0.2 (moodle-mootyper-script.html) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ -->
+<!-- GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html -->
+<!-- Thanks to catdad for the canvas-confetti on https://github.com/catdad/canvas-confetti -->
+
+<!-- Use the code in a block or in the description of the activity. -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+<script>
+    window.onload = function() {
+        jquery_load_check_interval = setInterval(function() {
+            if (window.jQuery) {
+                $('#mainDiv').css('visibility', 'inherit');
+                $('#region-main').css('cursor', 'auto');
+                startConfettiSmall();
+                console.log("jquery successfully loaded...");
+                console.log($.fn.jquery); // <== version of jQuery
+                clearInterval(jquery_load_check_interval);
+            } else {
+                console.log("new try to load jquery...");
+            }
+        }, 150);        
+
+        /* PART FOR FUNCTIONS */
+
+        function startConfettiSmall () {
+            var elementNow = document.getElementsByClassName("txtBlue");
+            $(elementNow).addClass('lastPressed');
+
+            document.getElementById("keyboard").onkeypress = function(){
+                if ($('.lastPressed').hasClass('txtGreen')) {
+                    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                }
+                $(".txtGreen, .txtRed").removeClass("lastPressed");
+                var elementNow = document.getElementsByClassName("txtBlue");
+                $(elementNow).addClass('lastPressed');
+            }
+        }
+
+            /* END OF THE FUNCTIONS PART */
+    };
+</script>

@@ -1,8 +1,14 @@
-/* Moodle-Mootyper-Modified v.0.1 (moodle-mootyper-style.css) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
+/* Moodle-Mootyper-Modified v.0.2 (moodle-mootyper-style.css) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
 /* GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html */
 
 /* Put the code in the Raw-CSS of your theme. */
 
+#region-main {
+    cursor: wait;
+}
+#mainDiv {
+    visibility: hidden;
+}
 #reportDiv {
     margin-top: 10px;
 }
@@ -12,8 +18,9 @@
 }
 #btnContinue {
     background-color: #0d8a0d;
-    border-color: #9d9d9d;
-    box-shadow: 0px 0px 16px 6px #5dc727bd;
+    border-color: #3b3838;
+    box-shadow: 0px 0px 16px 6px #a5bd98bd;
+    float: right;
 }
 #statsLDiv {
     border-top-left-radius: 12px;
@@ -24,7 +31,8 @@
     border-bottom-right-radius: 12px;
 }
 #statsLDiv, #statsMDiv, #statsRDiv {
-    box-shadow: 3px 3px 14px 1px #aaa!important;
+    background-color: #bde3e3!important;
+    box-shadow: 3px 2px 12px 1px #aaa!important;
     font-family: inherit;
 }
 #statsRDiv {
@@ -42,16 +50,20 @@
     margin-right: 5px;
 }
 #texttoenter {    
+    letter-spacing: 2px;
+    line-height: 1.5;
     margin-top: 20px;
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 3px 3px 14px 3px #aaa;
+    box-shadow: 3px 3px 12px 2px #aaa;
+    background-color: transparent;
+    background-image: linear-gradient(168deg, #dddddd, transparent);
 }
-#keyboard {
-    color: #727272;
-    font-weight: 500;
-    padding: 10px;
-    width: 650px;
+.keyboardback {
+    color: #727272!important;
+    box-shadow: 5px 5px 14px 3px #aaa;
+    background-color: transparent;
+    background-image: linear-gradient(204deg, #dddddd, transparent);
 }
 
 /* The colors in the .txt*-classes could also be changed in the activity settings. */

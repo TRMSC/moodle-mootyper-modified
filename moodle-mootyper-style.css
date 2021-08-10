@@ -1,4 +1,4 @@
-/* Moodle-Mootyper-Modified v.0.2 (moodle-mootyper-style.css) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
+/* Moodle-Mootyper-Modified v.0.3 (moodle-mootyper-style.css) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
 /* GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html */
 
 /* Put the code in the Raw-CSS of your theme. */
@@ -8,6 +8,9 @@
 }
 #mainDiv {
     visibility: hidden;
+}
+#infoDiv {
+    font-size: .9375rem;
 }
 #reportDiv {
     margin-top: 10px;

@@ -10,8 +10,7 @@
     window.onload = function() {
         jquery_load_check_interval = setInterval(function() {
             if (window.jQuery) {
-                $('#mainDiv').css('visibility', 'inherit');
-                $('#region-main').css('cursor', 'auto');
+                makePrecautions();
                 startConfettiSmall();
                 console.log("jquery successfully loaded...");
                 console.log($.fn.jquery); // <== version of jQuery
@@ -22,6 +21,18 @@
         }, 150);        
 
         /* PART FOR FUNCTIONS */
+
+        function makePrecautions () {
+            $("#infoDiv").find('br').replaceWith(' ');
+            var str = $("#infoDiv").text();
+            str = str.replace('von', 'von ').replace('Vorgegeben', 'Vorgegebene');
+            $("#infoDiv").text(str);
+            str = $("#infoDiv").html();
+            str = str.replaceAll('&nbsp;&nbsp;', '&nbsp;&nbsp;|&nbsp;');
+            $("#infoDiv").html(str);
+            $('#mainDiv').css('visibility', 'inherit');
+            $('#region-main').css('cursor', 'auto');
+        }
 
         function startConfettiSmall () {
             var elementNow = document.getElementsByClassName("txtBlue");
